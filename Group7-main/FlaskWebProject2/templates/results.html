@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Data imported from mongoDB</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <div>
+        <table style="width:100%">
+<tr>
+                <th>Cruise</th>
+                <th>Destination</th>
+                <th>Offer</th>
+                <th>Conditions</th>
+                <th>Offer_Availability</th>
+                <th>Period</th>
+                <th>Special</th>
+                <th>Full_Price</th>
+                <th>Special_Price</th>
+                <th>Time</th>
+
+            </tr>
+            {% for holiday in holidays %}
+            <tr>
+                <td>{{holiday[0]}}</td>
+                <td>{{holiday[1]}}</td>
+                <td>{{holiday[2]}}</td>
+                <td>{{holiday[3]}}</td>
+                <td>{{holiday[4]}}</td>
+                <td>{{holiday[5]}}</td>
+                <td>{{holiday[6]}}</td>
+                <td>{{holiday[7]}}</td>
+                <td>{{holiday[8]}}</td>
+                <td>{{holiday[9]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+	<div src="graph.html"></div>
+    </div>
+    {% endblock %}
+</body>
+</html>

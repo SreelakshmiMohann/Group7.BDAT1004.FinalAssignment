@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <div align="center">
+    <h2>&nbsp;&nbsp;&nbsp;Welcome to Home Page </h2>
+    <p> Cruises represent one of the main segments of the leisure travel and tourism sector, operating in various regions across the globe, from the Mediterranean Sea to the Pacific Ocean. In recent years, the cruise industry revenue
+        worldwide grew to over 27 billion U.S. dollars, though this figure roughly halved in 2021 due to the impact of the coronavirus (COVID-19) pandemic on global tourism. </p>
+
+
+        <h1> &nbsp;&nbsp;&nbsp; Top cruise Destinations! </h1>
+    &nbsp;&nbsp;<img src="https://th.bing.com/th/id/R.58647bac0d3778bd6d5e4067a5bee56b?rik=x26PUTtSeDcRxA&riu=http%3a%2f%2fwww.travelagentsintlsc.com%2fwp-content%2fuploads%2f2019%2f07%2fScenic-Cruises.jpg&ehk=TP%2b65fS0RcsGExQ6MYp%2fRixTvUtmP47Eu3ZBNBxrZDw%3d&risl=&pid=ImgRaw&r=0" alt="Trulli" width="800" height="380">
+    <p> &nbsp;&nbsp;<a href="{{ url_for('results') }}">Click here to see price listing!</a> </p>
+        </div>
+    {% endblock %}
+</body>
+</html>

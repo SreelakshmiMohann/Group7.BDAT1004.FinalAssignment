@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+     <meta charset="utf-8">
+    <title>Visualization</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cruise', 'Special Price', 'Full Price'],
+          ['Splendours of Europe', 3795, 5295],
+          ['Jewels of the Rhine', 2645, 3895],
+          ['Prague with Danube Delights', 3575, 4825],
+          ['Springtime Delights', 4095, 5345],
+	    ['Danube Explorer', 2645 , 3895],
+	    ['Three Rivers Discovery', 8140, 9640],
+	    ['Grand Tour Vietnam', 5895, 7895],
+	    ['Treasures & Temples Cambodia', 4705 ,6705]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Cruise Rates',
+            subtitle: 'Cruise Name, Special Price, and Full Price',
+          },
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+
+  <body>
+
+  {% extends "template.html" %}
+    {% block content %}
+    <center>
+   <h1>Comparison between Special Price and Actual Price</h1>
+    <div id="barchart_material" style="width: 1400px; height: 500px;"></div>
+   {% endblock %}
+   	</center>
+  </body>
+</html>
